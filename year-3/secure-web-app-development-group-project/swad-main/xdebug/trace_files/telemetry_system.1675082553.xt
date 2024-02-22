@@ -1,0 +1,15 @@
+TRACE START [2023-01-30 12:42:33.111499]
+    0.1717    1159712   -> DatabaseWrapper->__destruct() /p3t/phpappfolder/includes/telemetry/app/src/wrappers/DatabaseWrapper.php:0
+    0.1718    1159712   -> Monolog\Handler\Handler->__destruct() /p3t/phpappfolder/includes/vendor/monolog/monolog/src/Monolog/Handler/Handler.php:0
+    0.1718    1159712     -> Monolog\Handler\StreamHandler->close() /p3t/phpappfolder/includes/vendor/monolog/monolog/src/Monolog/Handler/Handler.php:41
+    0.1718    1159712       -> is_resource($var = NULL) /p3t/phpappfolder/includes/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:90
+    0.1718    1159712   -> Monolog\Handler\Handler->__destruct() /p3t/phpappfolder/includes/vendor/monolog/monolog/src/Monolog/Handler/Handler.php:0
+    0.1718    1159712     -> Monolog\Handler\StreamHandler->close() /p3t/phpappfolder/includes/vendor/monolog/monolog/src/Monolog/Handler/Handler.php:41
+    0.1718    1159712       -> is_resource($var = resource(10) of type (stream)) /p3t/phpappfolder/includes/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:90
+    0.1718    1159712       -> fclose($fp = resource(10) of type (stream)) /p3t/phpappfolder/includes/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:91
+    0.1718    1159208   -> Monolog\Handler\Handler->__destruct() /p3t/phpappfolder/includes/vendor/monolog/monolog/src/Monolog/Handler/Handler.php:0
+    0.1718    1159208     -> Monolog\Handler\StreamHandler->close() /p3t/phpappfolder/includes/vendor/monolog/monolog/src/Monolog/Handler/Handler.php:41
+    0.1718    1159208       -> is_resource($var = NULL) /p3t/phpappfolder/includes/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:90
+    0.1719     732168
+TRACE END   [2023-01-30 12:42:33.111706]
+

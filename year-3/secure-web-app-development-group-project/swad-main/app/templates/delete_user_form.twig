@@ -1,0 +1,48 @@
+{# extends layout.twig #}
+{# file to visualise the dashboard #}
+{# includes responsive navigation bar #}
+{# includes page content and features #}
+
+{% extends 'layout.twig' %}
+{% set page_title = 'Delete a user' %}
+{% block content %}
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-lg-5">
+            <a class="navbar-brand"><i class="bi bi-file-person-fill"></i>  {{ username }}</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="{{ logout_path }}">Log out  <i class="bi bi-door-open-fill"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <main class="form-signin">
+
+        <div class="page-content-div text-center">
+            <form action="{{ action_delete_user }}" method="post">
+                <h2>{{ header_2 }}</h2>
+                <br>
+                <div class="form-floating" style="width: 400px; margin-left: auto; margin-right: auto;">
+                    <input type="number" class="form-control" id="user_id" name="user_id" placeholder="User ID" value="{{ initial_input_box_value }}" required>
+                    <label for="user_id">User ID</label>
+                </div>
+                <br>
+                <div class="text-center">
+                    <button class="w-10 btn btn-lg bg-primary text-white" type="submit" style="margin-right: 15px;">Submit</button>
+                    <button class="w-10 btn btn-lg bg-primary text-white" type="reset">Reset</button>
+                </div>
+            </form>
+            <br>
+            <form action="{{ action_dashboard }}" method={{ method }}>
+                <button class="btn btn-primary" type="submit"
+                        style="background-color: #0d6efd; color: whitesmoke; ;">Back to dashboard
+                </button>
+            </form>
+        </div>
+
+    </main>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{# twig file to show render of the request telemetry details asking for user input #}
+{# extends the layout twig file #}
+
+{% extends 'layout.twig' %}
+{% set page_title = 'Obtain telemetry data' %}
+{% block content %}
+    <body class="text-center">
+    <main class="form-signin">
+    <div class="align-items-center">
+        <h1>Welcome, {{ username }}</h1>
+        <br>
+        <p>Enter your team name below to obtain telemetry data</p>
+            <div class="form-signin">
+                <form action="{{ action }}" method={{ method }}>
+                    <div class="form-floating">
+                        <input type="text" class="form-control" name="id" value="{{ team_name }}"  maxlength="12" required>
+                        <label for="floatingInput2">Team name</label>
+                    </div>
+                    <br>
+                    <button class="w-100 btn btn-lg" type="submit" style="background-color: #0d6efd; color: whitesmoke; margin-bottom: 5px;">Request Data</button>
+                </form>
+            </div>
+    </div>
+    </main>
+    </body>
+
+{% endblock %}

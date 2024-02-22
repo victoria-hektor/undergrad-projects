@@ -1,0 +1,92 @@
+{# Extends banner.twig #}
+{# file to visualise the telemetry creation page #}
+
+{% extends 'banner.twig' %}
+{% set page_title = 'Create Telemetry' %}
+{% block content %}
+
+    <main class="form-signin">
+        <div id="page-content-div">
+            <div class="justify-content-center align-items-center">
+                <form action="{{ action }}" method="post">
+                    <div class="mb-4" style="width: 450px; height: 800px;">
+                        <ion-icon name="create-telemetry" style="font-size: 100px; color: #055160;"></ion-icon>
+                        <h2>{{ header_2 }}</h2>
+                        <p>{{ paragraph_1 }} {{ username }} <i class="bi bi-arrow-down"></i></p>
+
+                        <div class="mb-3">
+                            <label for="temperature">Temperature</label>
+                            <input type="number" class="form-control" id="temperature" name="temperature"
+                                   placeholder="Temperature" value="{{ initial_input_box_value }}" maxlength="7"
+                                   required>
+                            <div id="temp_help" class="form-text">Enter a value between -273.15 and 300</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="fan_direction">Fan direction</label>
+                            <select class="form-select" id="fan_direction" name="fan_direction">
+                                <option value="forward">Forward</option>
+                                <option value="reverse">Reverse</option>
+                            </select>
+
+                            <div id="fan_help" class="form-text">Select either a forward or reverse fan direction</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="keypad">Keypad</label>
+                            <input type="tel" pattern="[0-9]{6}" class="form-control" id="keypad" name="keypad"
+                                   placeholder="Keypad (6 max)" value="{{ initial_input_box_value }}" minlength="6"
+                                   maxlength="6" required>
+                            <div id="keypad_help" class="form-text">Enter a six-digit number
+                                <value></value>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="switch_1">Switch 1</label>
+                            <div id="switch_help" class="form-text">Select either "on" or "off" for all four switches
+                            </div>
+                            <select class="form-select" id="switch_1" name="switch_1">
+                                <option value="on">On</option>
+                                <option value="off">Off</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="switch_1">Switch 2</label>
+                            <select class="form-select" id="switch_2" name="switch_2">
+                                <option value="on">On</option>
+                                <option value="off">Off</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="switch_1">Switch 3</label>
+                            <select class="form-select" id="switch_3" name="switch_3">
+                                <option value="on">On</option>
+                                <option value="off">Off</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="switch_4">Switch 4</label>
+                            <select class="form-select" id="switch_4" name="switch_4">
+                                <option value="on">On</option>
+                                <option value="off">Off</option>
+                            </select>
+                        </div>
+                        <div class="btn-group-horizontal text-center">
+                            <button class="btn btn-md btn-primary" type="submit"
+                                    style="background-color:#0d6efd; color: whitesmoke;">Submit
+                            </button>
+                            <button class="btn btn-md btn-primary" type="reset"
+                                    style="background-color: #0d6efd; color: whitesmoke;">Reset
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="justify-content-center align-items-center mb-4 text-center" style="width: 450px;">
+                <form action="{{ action_dashboard }}" method={{ method }}>
+                    <button class="btn btn-primary" type="submit"
+                            style="background-color: #0d6efd; color: whitesmoke;">Back to dashboard
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+{% endblock %}

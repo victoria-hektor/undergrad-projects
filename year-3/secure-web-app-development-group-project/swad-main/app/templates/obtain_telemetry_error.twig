@@ -1,0 +1,27 @@
+{# twig file to show render of the failed request for telemetry details #}
+{# extends the layout twig file #}
+
+{% extends 'layout.twig' %}
+{% set page_title = 'Telemetry obtain error!' %}
+{% block content %}
+    <body class="text-center">
+    <main class="form-signin">
+        <div class="align-items-center">
+            <h1>{{ page_heading_1 }}</h1>
+            <br>
+            <div class="form-signin">
+                <form action="{{ action }}" method={{ method }}>
+                    <div class="form-floating">
+                        <input type="text" class="form-control" name="id" value="{{ team_name }}"  maxlength="12" required>
+                        <label for="id">Enter team name</label>
+                        <br>
+                        <div class="alert alert-danger" role="alert"><p>Invalid team name submitted!</p></div>
+                    </div>
+                    <button class="w-100 btn btn-lg" type="submit" style="background-color: #0d6efd; color: whitesmoke; margin-bottom: 5px;">Request Data</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    </body>
+
+{% endblock %}

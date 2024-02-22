@@ -1,0 +1,19 @@
+{# File to visualise error message for failure to send telemetry data #}
+
+{% extends 'layout.twig' %}
+{% set page_title = 'Create telemetry failure!' %}
+{% block content %}
+
+    <body class="text-center">
+    <main class="form-signin">
+        <div class="align-items-center">
+            <h1>Failed to send telemetry data!</h1>
+            <br>
+            <form action="{{ action }}" method={{ method }}>
+                <button class="btn btn-primary" type="submit" style="background-color: #0d6efd; color: whitesmoke; margin-bottom: 5px;">Back to dashboard</button>
+            </form>
+        </div>
+    </main>
+    </body>
+
+{% endblock %}

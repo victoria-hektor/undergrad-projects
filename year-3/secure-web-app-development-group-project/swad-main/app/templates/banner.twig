@@ -1,0 +1,12 @@
+{#  This is a comment in twig #}
+{# banner twig file, extends the layout twig file #}
+
+{% extends 'layout.twig' %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block banner %}
+    <div id="banner-div">
+        <h1>{{ page_heading_1 }}</h1>
+    </div>
+    <div id="clear-div"></div>
+{% endblock %}
+

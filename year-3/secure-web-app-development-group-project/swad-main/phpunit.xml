@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- this allows pre-installed packages and source code will load automatically -->
+<phpunit bootstrap="vendor/autoload.php">
+    <!-- This will allow PHP to print to output colours for success & failure -->
+         colors="true"
+    <!-- This will tell PHPUnit to stop when a test fails -->
+         stopOnFailure="false"
+    <testsuites>
+        <!-- names this set of tests -->
+        <testsuite name="SWAD_CW">
+            <!-- specifies location of test files -->
+            <directory>Tests</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

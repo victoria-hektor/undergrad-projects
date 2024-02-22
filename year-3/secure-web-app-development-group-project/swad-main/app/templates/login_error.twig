@@ -1,0 +1,38 @@
+{# sets out the error view if login unsuccessful #}
+{# extends the banner twig file #}
+
+{% extends 'banner.twig' %}
+{% set page_title = 'Login error!' %}
+{% block content %}
+
+    <main class="form-signin">
+
+        <div id="page-content-div">
+            <form action="{{ action }}" method="post">
+                <div class="mb-4" style="width: 72px; height: 57px;"><ion-icon name="log-in" style="font-size: 100px; color: #055160;"></ion-icon></div>
+                <h2>Sign-in or register</h2>
+                <p>Enter your details below  <i class="bi bi-arrow-down"></i></p>
+
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Username" value="{{ initial_input_box_value }}" minlength="4"required>
+                    <label for="username">Username</label>
+                    <div id="username_help" class="form-text">Use only alphanumeric characters (4 characters minimum)</div>
+                </div>
+                <br>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" value="{{ initial_input_box_value }}" minlength="8"required>
+                    <label for="password">Password</label>
+                    <div id="username_help" class="form-text">Use a strong password (8 characters minimum)</div>
+                </div>
+                <br>
+                <div class="alert alert-danger" role="alert"><p>Error! Please try again.</p></div>
+                <button class="w-100 btn btn-lg" type="submit" style="background-color:#0d6efd; color: whitesmoke; margin-bottom: 5px;">Sign-in/Register</button>
+                <br>
+                <button class="w-100 btn btn-lg" type="reset" style="background-color: #0d6efd; color: whitesmoke;">Reset</button>
+            </form>
+        </div>
+
+    </main>
+
+
+{% endblock %}

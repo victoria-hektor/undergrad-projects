@@ -1,0 +1,61 @@
+{# extends layout.twig #}
+{# file to visualise the dashboard #}
+{# includes responsive navigation bar #}
+{# includes page content and features #}
+
+{% extends 'layout.twig' %}
+{% set page_title = 'Dashboard' %}
+{% block content %}
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{{ css_path }}" rel="stylesheet" />
+</head>
+<body class="text-center">
+<!-- Responsive navbar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container px-lg-5">
+        <a class="navbar-brand"><i class="bi bi-file-person-fill"></i>  Welcome, {{ username }}!</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="{{ logout_path }}">Log out  <i class="bi bi-door-open-fill"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<br>
+<br>
+<h3>Choose an option to get started!</h3>
+<br>
+<!-- Page Content-->
+<section class="pt-4">
+    <div class="container px-lg-5">
+        <!-- Page Features-->
+        <div class="row gx-lg-5">
+            <div class="col-lg-6 col-xxl-4 mb-5">
+                <div class="card bg-light border-0 h-100">
+                    <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-collection-fill"></i></div>
+                        <h2 class="fs-4 fw-bold">{{ obtain_messages }}</h2>
+                        <br>
+                        <form action="{{ action }}" method={{ method }}>
+                        <button class="w-100 btn btn-lg" type="submit" style="background-color: #0d6efd; color: whitesmoke; margin-bottom: 5px;">Obtain</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xxl-4 mb-5">
+                <div class="card bg-light border-0 h-100">
+                    <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-chat-dots-fill"></i></div>
+                        <h2 class="fs-4 fw-bold">{{ create_message }}</h2>
+                        <br>
+                        <form action="{{ action_create }}" method={{ method }}>
+                        <button class="w-100 btn btn-lg" type="submit" style="background-color: #0d6efd; color: whitesmoke; margin-bottom: 5px;">Create</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

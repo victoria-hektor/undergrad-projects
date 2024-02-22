@@ -1,0 +1,47 @@
+{# Extends banner.twig #}
+{# file to visualise the telemetry creation page #}
+
+{% extends 'banner.twig' %}
+{% set page_title = 'Create a user' %}
+{% block content %}
+
+    <main class="form-signin">
+            <div class="justify-content-center align-items-center">
+                <form action="{{ action }}" method="post">
+                    <div class="mb-4" style="width: 450px;">
+                        <ion-icon name="create-user" style="font-size: 100px; color: #055160;"></ion-icon>
+                        <h2>{{ header_2 }}</h2>
+
+                        <div class="mb-3">
+                            <label for="temperature">Username</label>
+                            <input type="text" class="form-control" id="username" name="username"
+                                   placeholder="Username" value="{{ initial_input_box_value }}" minlength="4" required>
+                            <div id="username_help" class="form-text">Enter a username for a new user</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" name="password"
+                                   placeholder="Password" value="{{ initial_input_box_value }}" minlength="8"required>
+                            <div id="password_help" class="form-text">Enter password for a new user</div>
+                        </div>
+                        <div class="btn-group-horizontal text-center">
+                            <button class="btn btn-md btn-primary" type="submit"
+                                    style="background-color:#0d6efd; color: whitesmoke;">Submit
+                            </button>
+                            <button class="btn btn-md btn-primary" type="reset"
+                                    style="background-color: #0d6efd; color: whitesmoke;">Reset
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <div class="justify-content-center align-items-center mb-4 text-center" style="width: 450px;">
+                <form action="{{ action_dashboard }}" method={{ method }}>
+                    <button class="btn btn-primary" type="submit"
+                            style="background-color: #0d6efd; color: whitesmoke;">Back to dashboard
+                    </button>
+                </form>
+            </div>
+    </main>
+{% endblock %}

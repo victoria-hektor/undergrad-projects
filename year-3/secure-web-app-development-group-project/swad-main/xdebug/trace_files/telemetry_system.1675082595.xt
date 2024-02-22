@@ -1,0 +1,23 @@
+TRACE START [2023-01-30 12:43:15.305348]
+    1.5235    1414576   -> DatabaseWrapper->__destruct() /p3t/phpappfolder/includes/telemetry/app/src/wrappers/DatabaseWrapper.php:0
+    1.5235    1414576   -> SoapWrapper->__destruct() /p3t/phpappfolder/includes/telemetry/app/src/wrappers/SoapWrapper.php:0
+    1.5235    1414576   -> Monolog\Handler\Handler->__destruct() /p3t/phpappfolder/includes/vendor/monolog/monolog/src/Monolog/Handler/Handler.php:0
+    1.5235    1414576     -> Monolog\Handler\StreamHandler->close() /p3t/phpappfolder/includes/vendor/monolog/monolog/src/Monolog/Handler/Handler.php:41
+    1.5235    1414576       -> is_resource($var = resource(18) of type (stream)) /p3t/phpappfolder/includes/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:90
+    1.5235    1414576       -> fclose($fp = resource(18) of type (stream)) /p3t/phpappfolder/includes/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:91
+    1.5235    1414056   -> Monolog\Handler\Handler->__destruct() /p3t/phpappfolder/includes/vendor/monolog/monolog/src/Monolog/Handler/Handler.php:0
+    1.5235    1414056     -> Monolog\Handler\StreamHandler->close() /p3t/phpappfolder/includes/vendor/monolog/monolog/src/Monolog/Handler/Handler.php:41
+    1.5235    1414056       -> is_resource($var = resource(14) of type (stream)) /p3t/phpappfolder/includes/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:90
+    1.5235    1414056       -> fclose($fp = resource(14) of type (stream)) /p3t/phpappfolder/includes/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:91
+    1.5235    1413552   -> Monolog\Handler\Handler->__destruct() /p3t/phpappfolder/includes/vendor/monolog/monolog/src/Monolog/Handler/Handler.php:0
+    1.5235    1413552     -> Monolog\Handler\StreamHandler->close() /p3t/phpappfolder/includes/vendor/monolog/monolog/src/Monolog/Handler/Handler.php:41
+    1.5235    1413552       -> is_resource($var = NULL) /p3t/phpappfolder/includes/vendor/monolog/monolog/src/Monolog/Handler/StreamHandler.php:90
+    1.5235    1413552   -> SoapValidator->__destruct() /p3t/phpappfolder/includes/telemetry/app/src/validators/SoapValidator.php:0
+    1.5235    1413552   -> TelemetryDetailsModel->__destruct() /p3t/phpappfolder/includes/telemetry/app/src/model/TelemetryDetailsModel.php:0
+    1.5235    1413552   -> PHPMailer\PHPMailer\PHPMailer->__destruct() /p3t/phpappfolder/includes/vendor/phpmailer/phpmailer/src/PHPMailer.php:0
+    1.5236    1413552     -> PHPMailer\PHPMailer\PHPMailer->smtpClose() /p3t/phpappfolder/includes/vendor/phpmailer/phpmailer/src/PHPMailer.php:841
+    1.5236    1413552       -> PHPMailer\PHPMailer\SMTP->connected() /p3t/phpappfolder/includes/vendor/phpmailer/phpmailer/src/PHPMailer.php:2244
+    1.5236    1413552         -> is_resource($var = NULL) /p3t/phpappfolder/includes/vendor/phpmailer/phpmailer/src/SMTP.php:658
+    1.5242     907680
+TRACE END   [2023-01-30 12:43:15.306051]
+

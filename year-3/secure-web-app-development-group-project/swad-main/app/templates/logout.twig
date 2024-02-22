@@ -1,0 +1,34 @@
+{# this is the landing page after successful login #}
+{# extends the layout twig file #}
+
+{% extends 'banner.twig' %}
+{% set page_title = 'Logout' %}
+{% block content %}
+
+    <main class="form-signin">
+
+        <div id="page-content-div">
+            <form action="{{ action }}" method="post">
+                <div class="mb-4" style="width: 72px; height: 57px;"><ion-icon name="log-in" style="font-size: 100px; color: #055160;"></ion-icon></div>
+                <h2>Sign-in or register</h2>
+                <p>Enter your details below  <i class="bi bi-arrow-down"></i></p>
+
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Username" value="{{ initial_input_box_value }}" minlength="4" required>
+                    <label for="username">Username</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" value="{{ initial_input_box_value }}" minlength="8" required>
+                    <label for="password">Password</label>
+                </div>
+                <div class="alert alert-success" role="alert"><p>Successfully logged out!</p></div>
+                <button class="w-100 btn btn-lg" type="submit" style="background-color: #0d6efd; color: whitesmoke; margin-bottom: 5px;">Sign-in/Register</button>
+                <br>
+                <button class="w-100 btn btn-lg" type="reset" style="background-color: #0d6efd; color: whitesmoke;">Reset</button>
+            </form>
+        </div>
+
+    </main>
+
+
+{% endblock %}
