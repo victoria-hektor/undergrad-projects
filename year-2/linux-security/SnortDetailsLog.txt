@@ -1,0 +1,190 @@
+Run time for packet processing was 885.441716 seconds
+Snort processed 28348 packets.
+Snort ran for 0 days 0 hours 14 minutes 45 seconds
+   Pkts/min:         2024
+   Pkts/sec:           32
+===============================================================================
+Memory usage summary:
+  Total non-mmapped bytes (arena):       44642304
+  Bytes in mapped regions (hblkhd):      13574144
+  Total allocated space (uordblks):      40183664
+  Total free space (fordblks):           4458640
+  Topmost releasable block (keepcost):   14416
+===============================================================================
+Packet I/O Totals:
+   Received:        28348
+   Analyzed:        28348 (100.000%)
+    Dropped:            0 (  0.000%)
+   Filtered:            0 (  0.000%)
+Outstanding:            0 (  0.000%)
+   Injected:            0
+===============================================================================
+Breakdown by protocol (includes rebuilt packets):
+        Eth:        28348 (100.000%)
+       VLAN:            0 (  0.000%)
+        IP4:        28332 ( 99.944%)
+       Frag:            0 (  0.000%)
+       ICMP:            0 (  0.000%)
+        UDP:         2385 (  8.413%)
+        TCP:        22453 ( 79.205%)
+        IP6:            2 (  0.007%)
+    IP6 Ext:            2 (  0.007%)
+   IP6 Opts:            0 (  0.000%)
+      Frag6:            0 (  0.000%)
+      ICMP6:            1 (  0.004%)
+       UDP6:            1 (  0.004%)
+       TCP6:            0 (  0.000%)
+     Teredo:            0 (  0.000%)
+    ICMP-IP:            0 (  0.000%)
+    IP4/IP4:            0 (  0.000%)
+    IP4/IP6:            0 (  0.000%)
+    IP6/IP4:            0 (  0.000%)
+    IP6/IP6:            0 (  0.000%)
+        GRE:            0 (  0.000%)
+    GRE Eth:            0 (  0.000%)
+   GRE VLAN:            0 (  0.000%)
+    GRE IP4:            0 (  0.000%)
+    GRE IP6:            0 (  0.000%)
+GRE IP6 Ext:            0 (  0.000%)
+   GRE PPTP:            0 (  0.000%)
+    GRE ARP:            0 (  0.000%)
+    GRE IPX:            0 (  0.000%)
+   GRE Loop:            0 (  0.000%)
+       MPLS:            0 (  0.000%)
+        ARP:           14 (  0.049%)
+        IPX:            0 (  0.000%)
+   Eth Loop:            0 (  0.000%)
+   Eth Disc:            0 (  0.000%)
+   IP4 Disc:         3494 ( 12.325%)
+   IP6 Disc:            0 (  0.000%)
+   TCP Disc:            0 (  0.000%)
+   UDP Disc:            0 (  0.000%)
+  ICMP Disc:            0 (  0.000%)
+All Discard:         3494 ( 12.325%)
+      Other:            0 (  0.000%)
+Bad Chk Sum:        13854 ( 48.871%)
+    Bad TTL:            0 (  0.000%)
+     S5 G 1:            0 (  0.000%)
+     S5 G 2:            0 (  0.000%)
+      Total:        28348
+===============================================================================
+Action Stats:
+     Alerts:            1 (  0.004%)
+     Logged:            1 (  0.004%)
+     Passed:            0 (  0.000%)
+Limits:
+      Match:            0
+      Queue:            0
+        Log:            0
+      Event:            0
+      Alert:            0
+Verdicts:
+      Allow:        28110 ( 99.160%)
+      Block:            0 (  0.000%)
+    Replace:            0 (  0.000%)
+  Whitelist:          238 (  0.840%)
+  Blacklist:            0 (  0.000%)
+     Ignore:            0 (  0.000%)
+      Retry:            0 (  0.000%)
+===============================================================================
+Frag3 statistics:
+        Total Fragments: 0
+      Frags Reassembled: 0
+               Discards: 0
+          Memory Faults: 0
+               Timeouts: 0
+               Overlaps: 0
+              Anomalies: 0
+                 Alerts: 0
+                  Drops: 0
+     FragTrackers Added: 0
+    FragTrackers Dumped: 0
+FragTrackers Auto Freed: 0
+    Frag Nodes Inserted: 0
+     Frag Nodes Deleted: 0
+===============================================================================
+===============================================================================
+Stream statistics:
+            Total sessions: 32
+              TCP sessions: 0
+              UDP sessions: 32
+             ICMP sessions: 0
+               IP sessions: 0
+                TCP Prunes: 0
+                UDP Prunes: 0
+               ICMP Prunes: 0
+                 IP Prunes: 0
+TCP StreamTrackers Created: 0
+TCP StreamTrackers Deleted: 0
+              TCP Timeouts: 0
+              TCP Overlaps: 0
+       TCP Segments Queued: 0
+     TCP Segments Released: 0
+       TCP Rebuilt Packets: 0
+         TCP Segments Used: 0
+              TCP Discards: 0
+                  TCP Gaps: 0
+      UDP Sessions Created: 32
+      UDP Sessions Deleted: 32
+              UDP Timeouts: 0
+              UDP Discards: 0
+                    Events: 9537
+           Internal Events: 0
+           TCP Port Filter
+                  Filtered: 0
+                 Inspected: 0
+                   Tracked: 9537
+           UDP Port Filter
+                  Filtered: 0
+                 Inspected: 0
+                   Tracked: 32
+===============================================================================
+HTTP Inspect - encodings (Note: stream-reassembled packets included):
+    POST methods:                         0         
+    GET methods:                          0         
+    HTTP Request Headers extracted:       0         
+    HTTP Request Cookies extracted:       0         
+    Post parameters extracted:            0         
+    HTTP response Headers extracted:      44        
+    HTTP Response Cookies extracted:      0         
+    Unicode:                              0         
+    Double unicode:                       0         
+    Non-ASCII representable:              0         
+    Directory traversals:                 0         
+    Extra slashes ("//"):                 0         
+    Self-referencing paths ("./"):        0         
+    HTTP Response Gzip packets extracted: 0         
+    Gzip Compressed Data Processed:       n/a       
+    Gzip Decompressed Data Processed:     n/a       
+    Total packets processed:              84        
+===============================================================================
+SMTP Preprocessor Statistics
+  Total sessions                                    : 0
+  Max concurrent sessions                           : 0
+===============================================================================
+dcerpc2 Preprocessor Statistics
+  Total sessions: 0
+===============================================================================
+SSL Preprocessor:
+   SSL packets decoded: 6582      
+          Client Hello: 7         
+          Server Hello: 8         
+           Certificate: 7         
+           Server Done: 97        
+   Client Key Exchange: 2         
+   Server Key Exchange: 0         
+         Change Cipher: 164       
+              Finished: 0         
+    Client Application: 2063      
+    Server Application: 0         
+                 Alert: 26        
+  Unrecognized records: 4327      
+  Completed handshakes: 0         
+        Bad handshakes: 7         
+      Sessions ignored: 0         
+    Detection disabled: 181       
+===============================================================================
+SIP Preprocessor Statistics
+  Total sessions: 0
+===============================================================================
+Snort exiting
